@@ -9,8 +9,9 @@
 }
 
 body {
-    font-family: 'Poppins', 'Roboto' sans-serif;
+    font-family: sans-serif;
     background: url('./detail-bg.jpg');
+    background-color: black;
 
 }
 
@@ -36,12 +37,24 @@ body {
     }
 
     #site_menu #site_menu-list {
+        position: absolute;
+        background-color: #161616;
+        top: 72px;
+        left: 0;
+        z-index: 100;
+        height: calc(100vh - 72px);
+        background-image: url('./113098-saitama-free-transparent-image-hd.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding-top: 40%;
         display: none;
+        
+    }
+    #site_menu #site_menu-list .menu-list {
+        display: block;
+        flex-direction: column;
     }
 
-    #menu_options #login_link {
-        display: none;
-    }
 }
 
 #site_menu {
@@ -50,6 +63,10 @@ body {
     align-items: center;
     
 
+}
+
+#site_menu #site_menu-list.active {
+    display: block;
 }
 
 
